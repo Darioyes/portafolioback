@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Mail\contactMail;
+use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
@@ -35,7 +35,7 @@ class EmailController extends Controller
         $email = $request->input('email');
         $content = $request->input('message');
 
-        $contactMail = new contactMail($name,$email,$content);
+        $contactMail = new ContactMail($name,$email,$content);
 
         //creamos el Mail:to enviando lo que no llega por el $request
         Mail::to('info@dariocode.com')
@@ -46,4 +46,5 @@ class EmailController extends Controller
             'success' => false
         ],200);
     }
+
 }

@@ -36,7 +36,7 @@ class ContactMail extends Mailable
     {
         return new Envelope(
             from: new Address('info@dariocode.com','Portafolio de Dario Gutierrez'),
-            subject: 'Usurio pagina web del portafolio',
+            subject: 'Usuraio pagina web del portafolio',
         );
     }
 
